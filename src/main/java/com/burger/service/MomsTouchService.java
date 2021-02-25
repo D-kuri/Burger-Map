@@ -8,16 +8,29 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class MomsTouchService {
+public class MomsTouchService implements BurgerStore {
     private final SqlSession sqlSession;
 
     public MomsTouchService(SqlSession sqlSession){
         this.sqlSession = sqlSession;
     }
 
-    public List<MomsTouch> findAll(){
+    @Override
+    public List<MomsTouch> getStores() {
         return sqlSession.getMapper(MomsTouchMapper.class).selectMomsTouch();
     }
-
-
 }
+
+
+//@Service
+//public class MomsTouchService {
+//    private final SqlSession sqlSession;
+//
+//    public MomsTouchService(SqlSession sqlSession){
+//        this.sqlSession = sqlSession;
+//    }
+//
+//    public List<MomsTouch> findAll(){
+//        return sqlSession.getMapper(MomsTouchMapper.class).selectMomsTouch();
+//    }
+//}

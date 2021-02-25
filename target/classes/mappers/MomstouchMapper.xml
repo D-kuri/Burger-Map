@@ -8,7 +8,7 @@
     </sql>
 
     <select id="selectMomsTouch" resultType="com.burger.domain.MomsTouch" >
-        select name, address
+        select <include refid="momsTouchColumns"/>
         from burger.momstouch
     </select>
 </mapper>

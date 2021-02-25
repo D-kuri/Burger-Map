@@ -1,7 +1,9 @@
+com/burger/controller/BasicController.class
+com/burger/service/BurgerStore.class
+com/burger/Application.class
 com/burger/configuration/DBConfiguration.class
 com/burger/service/MomsTouchService.class
 com/burger/dao/ApiDao.class
-com/burger/controller/BasicController.class
-com/burger/Application.class
+com/burger/domain/Lotteria.class
 com/burger/domain/MomsTouch.class
 com/burger/mapper/MomsTouchMapper.class

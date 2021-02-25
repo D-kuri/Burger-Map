@@ -1,6 +1,5 @@
 package com.burger.configuration;
 
-import com.burger.Application;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -8,7 +7,6 @@ import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
@@ -65,5 +63,7 @@ public class DBConfiguration {
     public org.apache.ibatis.session.Configuration mybatisConfig(){
         return new org.apache.ibatis.session.Configuration();
     }
+
+
 
 }

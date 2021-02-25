@@ -1,13 +1,11 @@
 package com.burger.controller;
 
-import com.burger.dao.ApiDao;
-import com.burger.mapper.MomsTouchMapper;
 import com.burger.service.MomsTouchService;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
-@RestController
+@Controller
 public class BasicController {
 
     private MomsTouchService momsTouchService;
@@ -24,8 +22,19 @@ public class BasicController {
 
     @GetMapping("/")
     public String helloWorld(){
-        System.out.println(momsTouchService.findAll().get(0).getAddress());
-        return momsTouchService.findAll().get(0).getAddress();
+        return "burger/map";
+        //        return momsTouchService.getStores().get(0).getAddress();
 //         return String.format("%s", apiDao.select());
+    }
+
+    @GetMapping("/index.html")
+    public ModelAndView abc(){
+        ModelAndView mav = new ModelAndView("map");
+        return mav;
+    }
+
+    @GetMapping("/test")
+    public String a(){
+        return "map";
     }
 }
