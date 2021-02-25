@@ -8,13 +8,13 @@ import org.springframework.stereotype.Repository;
 public class ApiDao {
     protected static final String NAMESPACE = "com.burger.";
 
-    private final SqlSession sqlSession;
+//    private final SqlSession sqlSession;
+//
+//    public ApiDao(SqlSession sqlSession){
+//        this.sqlSession = sqlSession;
+//    }
 
-    public ApiDao(SqlSession sqlSession){
-        this.sqlSession = sqlSession;
-    }
-
-    public String select(){
-        return sqlSession.selectOne(NAMESPACE + "test");
-    }
+//    public String select(){
+//        return sqlSession.selectOne(NAMESPACE + "test");
+//    }
 }

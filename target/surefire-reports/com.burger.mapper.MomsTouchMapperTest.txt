@@ -1,0 +1,7 @@
+-------------------------------------------------------------------------------
+Test set: com.burger.mapper.MomsTouchMapperTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.315 s <<< FAILURE! - in com.burger.mapper.MomsTouchMapperTest
+selectTest  Time elapsed: 0.005 s  <<< ERROR!
+org.junit.jupiter.api.extension.ParameterResolutionException: No ParameterResolver registered for parameter [com.burger.service.MomsTouchService momsTouchService] in executable [public com.burger.mapper.MomsTouchMapperTest(com.burger.service.MomsTouchService)].
+
