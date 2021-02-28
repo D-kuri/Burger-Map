@@ -17,7 +17,7 @@
         <div id="map"/>
         <div class="category">
             <ul>
-                <li id="coffeeMenu" onclick="changeMarker('coffee')">
+                <li id="burgerKing" onclick="changeMarker('burgerKing')">
                     <span class="ico_comm ico_burgerking"></span>
                     버거킹
                 </li>
@@ -25,11 +25,11 @@
                     <span class="ico_comm ico_store"></span>
                     맘스터치
                 </li>
-                <li id="carparkMenu" onclick="changeMarker('carpark')">
+                <li id="lotteria" onclick="changeMarker('lotteria')">
                     <span class="ico_comm ico_lotteria"></span>
                     롯데리아
                 </li>
-                <li id="carparkMenu" onclick="changeMarker('carpark')">
+                <li id="mcDonalds" onclick="changeMarker('mcDonalds')">
                     <span class="ico_comm ico_mcdonalds"></span>
                     맥도날드
                 </li>
@@ -37,7 +37,12 @@
         </div>
     </div>
 
-    <script th:src="@{/js/burger.js}"/> <!-- thymeleaf : th:src="@{/js/burger.js}" -->
-    <script></script>
+    <script src="/js/burger.js"></script> <!-- thymeleaf : th:src="@{/js/burger.js}" -->
+    <script src="/js/burgerKing.js"></script>
+    <script src="/js/momsTouch.js"></script>
+    <script src="/js/lotteria.js"></script>
+    <script src="/js/mcDonalds.js"></script>
+
+
     </body>
 </html>
