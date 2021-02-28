@@ -7,5 +7,5 @@ import java.util.List;
 
 @Mapper
 public interface MomsTouchMapper {
-    public List<MomsTouch> selectMomsTouch();
+    public List<MomsTouch> getMomsTouch();
 }

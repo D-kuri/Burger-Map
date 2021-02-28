@@ -21,6 +21,6 @@ class MomsTouchMapperTest{
         String springVersion = org.springframework.core.SpringVersion.getVersion();
 
         System.out.println(springVersion);
-        System.out.println(momsTouchService.getStores().get(0).getAddress());
+//        System.out.println(momsTouchService.getStores().get(0).getAddress());
     }
 }
