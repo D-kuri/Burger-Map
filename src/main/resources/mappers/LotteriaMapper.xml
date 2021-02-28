@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "mybatis-3-mapper.dtd">
+
+<mapper namespace="com.burger.mapper.LotteriaMapper">
+    <sql id="LotteriaColumns">
+        name,
+        address
+    </sql>
+
+    <select id="getLotteria" resultType="com.burger.domain.Lotteria" >
+        select <include refid="LotteriaColumns"/>
+        from burger.lotteria
+    </select>
+</mapper>

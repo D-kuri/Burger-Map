@@ -1,9 +1,9 @@
 package com.burger.service;
 
-import com.burger.domain.MomsTouch;
+import com.burger.domain.GeoCoder;
 
 import java.util.List;
 
 public interface BurgerStore {
-    List<MomsTouch> getStores();
+    List<GeoCoder> getStores() ;
 }

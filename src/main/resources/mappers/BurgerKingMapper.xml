@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "mybatis-3-mapper.dtd">
+
+<mapper namespace="com.burger.mapper.BurgerKingMapper">
+    <sql id="burgerKingColumns">
+        name,
+        address
+    </sql>
+
+    <select id="getBurgerKing" resultType="com.burger.domain.BurgerKing" >
+        select <include refid="burgerKingColumns"/>
+        from burger.burgerking
+    </select>
+</mapper>

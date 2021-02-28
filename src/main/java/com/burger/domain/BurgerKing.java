@@ -1,6 +1,6 @@
 package com.burger.domain;
 
-public class Lotteria {
+public class BurgerKing {
     private String name;
     private String address;
 
