@@ -7,7 +7,7 @@
         address
     </sql>
 
-    <select id="selectMomsTouch" resultType="com.burger.domain.MomsTouch" >
+    <select id="getMomsTouch" resultType="com.burger.domain.MomsTouch" >
         select <include refid="momsTouchColumns"/>
         from burger.momstouch
     </select>
