@@ -36,14 +36,11 @@ public class GeoCoder {
         ObjectMapper objectMapper = new ObjectMapper(); // can reuse, share globally
 
         String addressInfo = getKakaoApiFromAddress(fullAddress);
-//        String latitude = null;
-//        String longitude = null;
 
         objectMapper.configure(DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY, false);
         JsonNode rootNode = null;
         try {
             rootNode = objectMapper.readTree(addressInfo);
-
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -7,8 +7,8 @@
         address
     </sql>
 
-    <select id="getmcDonalds" resultType="com.burger.domain.McDonalds" >
+    <select id="getMcDonalds" resultType="com.burger.domain.McDonalds" >
         select <include refid="mcDonaldsColumns"/>
-        from burger.mcDonalds
+        from burger.mcdonalds
     </select>
 </mapper>
