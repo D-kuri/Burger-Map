@@ -10,11 +10,21 @@ function getMomsTouchLocations() {
 }
 
 async function createMomsTouchMarkers(){
+    momsTouchMarkers = [];
     let momsTouchLocations = await getMomsTouchLocations();
-    // console.log(momsTouchLocations);
+
     saveInfo(momsTouchLocations.momsTouch, momsTouchPositions, momsTouchMarkers, [5, 36]);
-    // console.log(momsTouchPositions)
-    // console.log(momsTouchMarkers)
+}
+
+function setMomsTouchClusterer(){
+    let momsTouchScore = document.getElementsByClassName('momsTouch_score')
+
+    clusterer.clear();
+    for (let i=0 ; i<parseInt(momsTouchScore[0].innerHTML) ; i++){
+        createMomsTouchMarkers().then(() => {
+            clusterer.addMarkers(momsTouchMarkers)
+        });
+    }
 }
 
 function setMomsTouchMarkers(){
@@ -23,8 +33,25 @@ function setMomsTouchMarkers(){
     mcDonalds.className = '';
     lotteria.className = '';
 
-    clusterer.clear();
-    clusterer.addMarkers(momsTouchMarkers);
+    setMomsTouchClusterer();
 }
 
-createMomsTouchMarkers();
+function showMomsTouchScore(){
+    burgerKing_score.style.display = "none";
+    momsTouch_score.style.display = "block";
+    lotteria_score.style.display = "none";
+    mcDonalds_score.style.display = "none";
+}
+
+function changeMomsTouchScore(score){
+    momsTouch_five.className = '';
+    momsTouch_four.className = '';
+    momsTouch_three.className = '';
+    momsTouch_two.className = '';
+    momsTouch_one.className = '';
+
+    score.className = 'momsTouch_score';
+
+    setMomsTouchClusterer();
+}
+

@@ -48,24 +48,28 @@ function saveInfo(burger, positions, markers, imagePoint) {
 }
 
 
-
 function changeMarker(type){
     // 없어도 동작하는듯?
     // let momsTouch = document.getElementById('momsTouch');
 
     if (type === 'burgerKing'){
+        showBurgerKingScore();
         setBurgerKingMarkers();
+
         return;
     }
     if (type === 'momsTouch'){
+        showMomsTouchScore();
         setMomsTouchMarkers();
         return;
     }
     if (type === 'lotteria'){
+        showLotteriaScore();
         setLotteriaMarkers();
         return;
     }
     if (type === 'mcDonalds'){
+        showMcDonaldsScore();
         setMcDonaldsMarkers();
         return;
     }
